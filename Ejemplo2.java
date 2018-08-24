@@ -8,7 +8,7 @@ import java.awt.Font;
     
     public void Saludar(){
       msg.setForeground(Color.RED);
-      msg.setFont
+      msg.setFont(new Font("algerian", Font.BOLD,24));
       JOptionPane.showMessageDialog(null, msg);
     }
    
