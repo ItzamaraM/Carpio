@@ -5,22 +5,25 @@ import java.util.ArrayList;
 import javax.swing.JApplet;
 
 public class PrácticaDelCuatroDeSeptiembre extends JApplet {
-   ArrayList<Rectángulo>lista;
+   ArrayList lista;
     
 
     
     public void init() {
         lista = new ArrayList(); //se asigna espacion a la variable cuando se va a ocupar
         FiguraCuadrada f= new FiguraCuadrada(50,60);
-        Rectángulo r = new Rectángulo(1100,80,10,10);
-        lista.add(r); 
+        Rectángulo r = new Rectángulo(100,80,10,10);
+        lista.add(r); lista.add(f); lista.add(new Rectángulo(75,125,80,20));
         //lista.add(f);
                 
     }
     
     public void paint(Graphics plumón){
-        Rectángulo x=lista.get(0);
-        plumón.drawRect(x.getX(),x.getY(), x.ancho, x.alto);
+        for (Object x:lista)
+            if(x instanceof Rectángulo){
+                Rectángulo y = (Rectángulo)x;
+       // Rectángulo x=(Rectángulo) lista.get(0);//es uncast un objeto temporal
+        plumón.drawRect(y.getX(),y.getY(), y.ancho, y.alto);
         
     }
 
@@ -54,4 +57,5 @@ class Rectángulo extends FiguraCuadrada{
         
     }
     
+}
 }
