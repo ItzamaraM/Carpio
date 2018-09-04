@@ -8,6 +8,10 @@ public class Demo {
         
         class Estudiante{
             String numControl;
+            
+            public void setNumControl(String nc){
+                numControl = nc;
+            }
         }
         class EstudianteISC extends Estudiante{
             public EstudianteISC(){
