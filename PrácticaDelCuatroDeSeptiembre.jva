@@ -1,0 +1,40 @@
+package carpio.Unidad1;
+
+import java.awt.Graphics;
+import javax.swing.JApplet;
+
+public class PrácticaDelCuatroDeSeptiembre extends JApplet {
+
+    
+    public void init() {
+        
+    }
+    
+    public void paint(Graphics plumón){
+        
+    }
+
+    
+}
+class FiguraCuadrada{
+   protected int ancho, alto;
+   
+   public FiguraCuadrada(int an, int al){
+       ancho = an;
+       alto  = al;
+   }
+    
+}
+
+class Rectángulo extends FiguraCuadrada{
+    private int x,y;
+    //super es una llamada
+    public Rectángulo(int an,int al,int x, int y){
+        super(an,al);
+        this.x =x;
+        this.y =y;
+        
+        
+    }
+    
+}
